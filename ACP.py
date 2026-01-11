@@ -1,14 +1,19 @@
-# Test dictionary
-test_dict = {'Codingal': 3, 'is': 2, 'best': 2, 'for': 2, 'Coding': 1}
+import math
 
-# Print the dictionary
-print("Test Dictionary:", test_dict)
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
 
-# Ask user to enter the frequency value to check
-value = int(input("Enter the frequency value you want to check: "))
+    def area(self):
+        return math.pi * (self.radius ** 2)
 
-# Count how many words have this frequency
-frequency_count = list(test_dict.values()).count(value)
+    def perimeter(self):
+        return 2 * math.pi * self.radius
 
-# Print the result
-print("The frequency of value", value, "is:", frequency_count)
+# Get input from user
+r = float(input("Enter the radius of the circle: "))
+circle = Circle(r)
+
+# Using + to concatenate strings
+print("Area of the circle: " + str(circle.area()))
+print("Perimeter of the circle: " + str(circle.perimeter()))
